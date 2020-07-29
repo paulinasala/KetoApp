@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="KetoApp.App">
+
+    <Application.Resources>
+        <ResourceDictionary>
+            <!--Global Styles-->
+            <Color x:Key="NavigationPrimary">#142B43</Color>
+            <x:String x:Key="FontKalamB">Kalam-Bold.ttf#Kalam-Bold</x:String>
+            <x:String x:Key="FontPoppinsB">Poppins-Bold.otf#Poppins-Bold</x:String>
+            <x:String x:Key="FontQarmic">Qarmic_sans_Abridged.ttf#Qarmic_sans_Abridged</x:String>
+            <x:String x:Key="FontAction1">Action_Man.ttf#Action_Man</x:String>
+            <x:String x:Key="FontAction2">Action_Man_Bold.ttf#Action_Man_Bold</x:String>
+            <Style TargetType="NavigationPage">
+                <Setter Property="BarBackgroundColor" Value="{StaticResource NavigationPrimary}" />
+                <Setter Property="BarTextColor" Value="White" />
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+    
+</Application>

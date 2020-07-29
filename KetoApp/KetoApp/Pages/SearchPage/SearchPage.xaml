@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="KetoApp.Pages.SearchPage.SearchPage">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical">
+            <SearchBar Placeholder="search food" PlaceholderColor="{StaticResource MyPeach}" SearchCommand="{Binding SearchButtonCommand}" Text="{Binding Input}" />
+            <ListView ItemsSource="{Binding FoodList}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Vertical">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*2"/>
+                                        <ColumnDefinition Width="*1"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Grid.Column="0" Margin="7,7,7,0" Text="{Binding Name}" ></Label>
+                                    <Label Grid.Column="1" Margin="7,7,7,0"   Text="{Binding Brand}" ></Label>
+                                </Grid>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

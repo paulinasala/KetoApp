@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:magic="clr-namespace:MagicGradients;assembly=MagicGradients"
+             mc:Ignorable="d"
+             x:Class="KetoApp.Pages.DiaryPage.DiaryPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <magic:GradientView VerticalOptions="FillAndExpand" Grid.Row="0" Grid.RowSpan="4">
+                    <magic:GradientView.GradientSource>
+                        <magic:GradientCollection>
+                            <magic:LinearGradient Angle="20">
+                                <magic:GradientStop Color="{StaticResource MyBlue}" Offset="0.4" />
+                                <magic:GradientStop Color="{StaticResource MyAzure}" Offset="1" />
+                            </magic:LinearGradient>
+                        </magic:GradientCollection>
+                    </magic:GradientView.GradientSource>
+                </magic:GradientView>
+                <Grid Grid.Row="0" BackgroundColor="Transparent" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Row="0" Grid.Column="0" Margin="0,1" Command="{Binding PrevDateCommand}" Scale="0.8" CornerRadius="15" BackgroundColor="Transparent" ImageSource="l_arrow.png" />
+                    <Button Grid.Row="0" Grid.Column="2" Margin="0,1" Command="{Binding PrevDateCommand}" Scale="0.8" CornerRadius="15" BackgroundColor="Transparent" ImageSource="r_arrow.png" />
+                    <Label Grid.Row="0" Grid.Column="1" Margin="0,1" FontFamily="{StaticResource FontKalamB}" Text="DATE" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="White"  FontSize="Medium"/>
+                </Grid>
+                <StackLayout HorizontalOptions="Center" Orientation="Horizontal" Grid.Row="1">
+                    <StackLayout Orientation="Vertical" Padding="6,0">
+                        <Label  FontSize="Medium"  FontFamily="{StaticResource FontPoppinsB}" Text="1200" TextColor="White" />
+                        <Label  FontFamily="{StaticResource FontPoppinsB}" Text="Goal"  TextColor="White" />
+                    </StackLayout>
+                    <StackLayout Orientation="Vertical" Padding="6,0">
+                        <Label FontSize="Medium" FontFamily="{StaticResource FontPoppinsB}" Text="-" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="White" />
+                    </StackLayout>
+                    <StackLayout Orientation="Vertical" Padding="6,0">
+                        <Label FontSize="Medium" FontFamily="{StaticResource FontPoppinsB}" Text="500" TextColor="White" />
+                        <Label FontFamily="{StaticResource FontPoppinsB}" Text="Food" TextColor="White" />
+                    </StackLayout>
+                    <StackLayout Orientation="Vertical" Padding="6,0">
+                        <Label FontSize="Medium" FontFamily="{StaticResource FontPoppinsB}" Text="+" TextColor="White" />
+                    </StackLayout>
+                    <StackLayout Orientation="Vertical" Padding="6,0">
+                        <Label FontSize="Medium" FontFamily="{StaticResource FontPoppinsB}" Text="200" TextColor="White" />
+                        <Label FontFamily="{StaticResource FontPoppinsB}" Text="Gym" TextColor="White" />
+                    </StackLayout>
+                    <StackLayout Orientation="Vertical" Padding="6,0">
+                        <Label FontSize="Medium" FontFamily="{StaticResource FontPoppinsB}" Text="=" TextColor="White" />
+                    </StackLayout>
+                    <StackLayout Orientation="Vertical" Padding="6,0">
+                        <Label FontSize="Medium" FontFamily="{StaticResource FontPoppinsB}" Text="500" TextColor="White" />
+                        <Label FontFamily="{StaticResource FontPoppinsB}" Text="Left" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="White" />
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Grid.Row="2" Orientation="Horizontal" Padding="20">
+                    <Image BackgroundColor="Transparent" Source="water2.png" Margin="0,15,0,0" WidthRequest="38" />
+                    <Image BackgroundColor="Transparent" Source="water2.png" Margin="0,15,0,0" WidthRequest="38" />
+                    <Image BackgroundColor="Transparent" Source="water2.png" Margin="0,15,0,0" WidthRequest="38" />
+                    <Image BackgroundColor="Transparent" Source="water2.png" Margin="0,15,0,0" WidthRequest="38" />
+                </StackLayout>
+                <StackLayout Grid.Row="3" Margin="10,20">
+                    <Label FontFamily="{StaticResource FontPoppinsB}" Text="Breakfast" TextColor="White" />
+                    <Button Padding="0" BackgroundColor="Transparent"  Image="plus.png"  HorizontalOptions="Start" Command="{Binding SearchPageCommand}" />
+                    <Label FontFamily="{StaticResource FontPoppinsB}" Text="Lunch" TextColor="White"  />
+                    <Button Padding="0" BackgroundColor="Transparent"  Image="plus.png"  HorizontalOptions="Start" Command="{Binding SearchPageCommand}" />
+                    <Label FontFamily="{StaticResource FontPoppinsB}" Text="Dinner" TextColor="White"  />
+                    <Button Padding="0" BackgroundColor="Transparent"  Image="plus.png"  HorizontalOptions="Start" Command="{Binding SearchPageCommand}" />
+                    <Label FontFamily="{StaticResource FontPoppinsB}" Text="Snacks" TextColor="White" />
+                    <Button Padding="0" BackgroundColor="Transparent"  Image="plus.png"  HorizontalOptions="Start" Command="{Binding SearchPageCommand}" />
+                    <Label FontFamily="{StaticResource FontPoppinsB}" Text="Water" TextColor="White" />
+                    <Button Padding="0" BackgroundColor="Transparent"  Image="plus.png"  HorizontalOptions="Start" Command="{Binding SearchPageCommand}" />
+                </StackLayout>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
